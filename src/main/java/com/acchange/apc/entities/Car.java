@@ -1,9 +1,6 @@
 package com.acchange.apc.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -17,7 +14,8 @@ public class Car {
     private String model;
 
     private Integer year;
-    @ManyToMany
+
+    @OneToMany(mappedBy = "car")
     private List<Detail> Details;
 
     public List<Detail> getDetails() {
