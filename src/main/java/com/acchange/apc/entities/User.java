@@ -17,6 +17,28 @@ public class User {
     @JoinTable
     List<Role> roles;
 
+    @ManyToOne
+    @JoinColumn(name = "pricePolitic_id")
+    private PricePolitic pricePolitic;
+
+    @OneToMany(mappedBy = "user")
+    private List<Car> cars;
+
+    public List<Car> getCars() {
+        return cars;
+    }
+
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
+    }
+
+    public PricePolitic getPricePolitic() {
+        return pricePolitic;
+    }
+
+    public void setPricePolitic(PricePolitic pricePolitic) {
+        this.pricePolitic = pricePolitic;
+    }
 
     public List<Role> getRoles() {
         return roles;

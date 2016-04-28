@@ -15,15 +15,20 @@ public class Car {
 
     private Integer year;
 
-    @OneToMany(mappedBy = "car")
-    private List<Detail> Details;
+    @ManyToOne
+    @JoinColumn(name = "car_id")
+    private User user;
+
+    @ManyToMany
+    @JoinTable
+    private List<Detail> details;
 
     public List<Detail> getDetails() {
-        return Details;
+        return details;
     }
 
     public void setDetails(List<Detail> details) {
-        Details = details;
+        details = details;
     }
 
     public String getMark() {
