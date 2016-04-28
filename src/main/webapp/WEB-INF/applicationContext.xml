@@ -34,8 +34,9 @@
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
+    
+    <!--<jpa:repositories base-package="com.acchange.apc.repositories"/>-->
 
-    <bean class="org.springframework.orm.jpa.JpaTransactionManager" id="TransactionManager">
-        <property name="dataSource" ref="dataSource"/>
-    </bean>
+    <jpa:repositories base-package="com.acchange.apc.repositories" entity-manager-factory-ref="emf"
+                      transaction-manager-ref="transactionManager"/>
 </beans>
