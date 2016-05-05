@@ -17,4 +17,6 @@ public class UserController {
         model.addAttribute("users", userService.findAll());
         return "users";
     }
+
+
 }

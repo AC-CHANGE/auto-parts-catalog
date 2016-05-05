@@ -23,6 +23,11 @@
 
 </head>
 <body>
+
+<%@taglib uri="http://tiles.apache.org/tags-tiles-extras" prefix="tilesx"%>
+
+<tilesx:useAttribute name="current"/>
+
 <div class="bs-component">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -38,8 +43,8 @@
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href='<spring:url value="/" />'>Home</a></li>
-                    <li><a href="<spring:url value="/users.html" />">Users</a></li>
+                    <li class="${current == 'index' ? 'active' : ''}"}><a href='<spring:url value="/" />'>Home</a></li>
+                    <li class="${current == 'users' ? 'active' : ''}"><a href="<spring:url value="/users.html" />">Users</a></li>
                     <li><a href="#">Link</a></li>
                 </ul>
                 <form class="navbar-form navbar-right" role="search">
