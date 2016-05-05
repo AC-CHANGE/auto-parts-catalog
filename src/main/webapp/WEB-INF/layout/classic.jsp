@@ -39,7 +39,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href='<spring:url value="/" />'>Home</a></li>
-                    <li><a href="#">Link</a></li>
+                    <li><a href="<spring:url value="/users.html" />">Users</a></li>
                     <li><a href="#">Link</a></li>
                 </ul>
                 <form class="navbar-form navbar-right" role="search">
