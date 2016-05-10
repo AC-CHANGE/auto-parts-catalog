@@ -20,8 +20,8 @@ public class UserController {
     }
 
     @RequestMapping("/users/{id}")
-    public String detail(Model model, @PathVariable int id){
-            model.addAttribute("user", userService.findOne(id));
+    public String details(Model model, @PathVariable int id){
+            model.addAttribute("user", userService.findOneWithCars(id));
         return "user-detail";
     }
 

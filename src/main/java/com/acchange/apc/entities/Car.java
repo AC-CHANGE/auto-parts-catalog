@@ -23,20 +23,22 @@ public class Car {
     @JoinTable
     private List<Detail> details;
 
-    public User getUser() {
-        return user;
-    }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
 
     public List<Detail> getDetails() {
         return details;
     }
 
     public void setDetails(List<Detail> details) {
-        details = details;
+        this.details = details;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getMark() {
@@ -55,19 +57,19 @@ public class Car {
         this.model = model;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     public Integer getYear() {
         return year;
     }
 
     public void setYear(Integer year) {
         this.year = year;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 }
